@@ -9,26 +9,26 @@ const state = {
 	run: false,
 	steps: [
 		{
-			target: '.my-00-step',
 			content: 'Initializing the tour',
 			placement: 'center',
+			target: '.my-00-step',
 		},
 		{
-			target: '.my-01-step',
 			content:
 				'Step One: The journey of a thousand miles starts with the *first step*',
+			target: '.my-01-step',
 		},
 		{
-			target: '.my-02-step',
 			content: "Step Two: you're moving forward and making progress",
+			target: '.my-02-step',
 		},
 		{
-			target: '.my-03-step',
 			content: "Step Three: Look at how far you've come",
+			target: '.my-03-step',
 		},
 		{
-			target: '.my-04-step',
 			content: 'Step Four: You have reached your *final destination*',
+			target: '.my-04-step',
 		},
 	],
 };
