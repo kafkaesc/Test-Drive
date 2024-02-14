@@ -1,5 +1,4 @@
 export function Button({ children, className, size, ...props }) {
-	console.log('size: ', size);
 	return size === 'large' && className ? (
 		<button
 			className={`px-3 py-1.5 border rounded-sm border-indigo-400 ${className}`}
