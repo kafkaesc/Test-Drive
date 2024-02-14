@@ -2,7 +2,9 @@
 
 Built by Jared Hettinger
 
-This is a testing project for experimenting with [React-Joyride](https://github.com/gilbarbara/react-joyride) for possible implementation on [¡Lenguau!](https://github.com/kafkaesc/Lenguau)
+This is a testing project for experimenting with [React-Joyride](https://github.com/gilbarbara/react-joyride) for possible implementation on [¡Lenguau!](https://lenguau.com)
+
+React Joyride docs: https://docs.react-joyride.com
 
 ## Run
 
