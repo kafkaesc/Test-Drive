@@ -54,21 +54,13 @@ export default function ButtonStartContinuous() {
 	return (
 		<div className="text-center">
 			<Joyride callback={handleTourCallback} {...tourState} />
-			<Button className="my-00-step mx-1" onClick={startTour} size="large">
+			<Button className="my-00-step mx-1" onClick={startTour}>
 				Start Tour
 			</Button>
-			<Button className="my-01-step mx-1" size="large">
-				Step 1
-			</Button>
-			<Button className="my-02-step mx-1" size="large">
-				Step 2
-			</Button>
-			<Button className="my-03-step mx-1" size="large">
-				Step 3
-			</Button>
-			<Button className="my-04-step mx-1" size="large">
-				Step 4
-			</Button>
+			<Button className="my-01-step mx-1">Step 1</Button>
+			<Button className="my-02-step mx-1">Step 2</Button>
+			<Button className="my-03-step mx-1">Step 3</Button>
+			<Button className="my-04-step mx-1">Step 4</Button>
 		</div>
 	);
 }
