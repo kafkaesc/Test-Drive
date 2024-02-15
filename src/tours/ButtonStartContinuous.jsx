@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Joyride, { STATUS } from 'react-joyride';
+import Joyride, { STATUS as JOYRIDE_STATUS } from 'react-joyride';
 import { Button } from '../elements/Button';
 
 const state = {
@@ -36,7 +36,7 @@ export default function ButtonStartContinuous() {
 
 	const handleTourCallback = (data) => {
 		const { status } = data;
-		const finishedStatuses = [STATUS.FINISHED, STATUS.SKIPPED];
+		const finishedStatuses = [JOYRIDE_STATUS.FINISHED, JOYRIDE_STATUS.SKIPPED];
 
 		if (finishedStatuses.includes(status)) {
 			setTourState((prev) => {
