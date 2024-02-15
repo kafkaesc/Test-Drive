@@ -31,7 +31,7 @@ const state = {
 	],
 };
 
-export default function ButtonStartContinuous() {
+export default function ButtonStartContinuousTour() {
 	const [tourState, setTourState] = useState(state);
 
 	const handleTourCallback = (data) => {
