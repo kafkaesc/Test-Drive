@@ -7,6 +7,7 @@ import Error from './Error';
 import ButtonStartContinuous from './pages/ButtonStartContinuous';
 import Home from './pages/Home';
 import reportWebVitals from './reportWebVitals';
+import Controlled from './pages/Controlled';
 
 const router = createBrowserRouter([
 	{
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
 		errorElement: <Error />,
 		children: [
 			{ path: '/button-start-continuous', element: <ButtonStartContinuous /> },
+			{ path: '/controlled', element: <Controlled /> },
 			{ path: '/', element: <Home /> },
 			{ path: '/home', element: <Home /> },
 		],
