@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Joyride, { STATUS as JOYRIDE_STATUS } from 'react-joyride';
-import { Button } from '../elements/Button';
+import Button from '../elements/Button';
 
 const state = {
 	continuous: true,
