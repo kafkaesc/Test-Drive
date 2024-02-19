@@ -12,7 +12,7 @@ export default function Expander({ buttonText, children }) {
 		<div>
 			<div className="text-center">
 				<Button
-					className="mx-auto mb-2 w-full md:w-1/3"
+					className="w-full mx-auto mb-2 md:w-1/3"
 					onClick={toggleIsExpanded}
 				>
 					{buttonText ? buttonText : 'Show More'}
@@ -20,7 +20,7 @@ export default function Expander({ buttonText, children }) {
 			</div>
 			<div
 				className={`border border-x-0 border-y-2 transition-all duration-700 ${
-					isExpanded ? 'max-h-40 overflow-auto' : 'max-h-0 overflow-hidden'
+					isExpanded ? 'max-h-80 overflow-auto' : 'max-h-0 overflow-hidden'
 				}`}
 			>
 				{children}
