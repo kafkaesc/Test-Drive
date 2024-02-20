@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from '../elements/Button';
 
-export default function Expander({ buttonText, children }) {
+export default function Expander({ buttonText, children, className }) {
 	const [isExpanded, setIsExpanded] = useState(false);
 
 	const toggleIsExpanded = () => {
@@ -12,7 +12,9 @@ export default function Expander({ buttonText, children }) {
 		<div>
 			<div className="text-center">
 				<Button
-					className="w-full mx-auto mb-2 md:w-1/3"
+					className={`w-full mx-auto mb-2 md:w-1/3${
+						className ? ' ' + className : ''
+					}`}
 					onClick={toggleIsExpanded}
 				>
 					{buttonText ? buttonText : 'Show More'}
