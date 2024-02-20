@@ -1,14 +1,12 @@
 export default function A({ className, children, href, ...props }) {
-	return className ? (
+	return (
 		<a
 			{...props}
-			className={`text-indigo-700 hover:underline ${className}`}
+			className={`text-indigo-700 hover:underline${
+				className ? ' ' + className : ''
+			}`}
 			href={href}
 		>
-			{children}
-		</a>
-	) : (
-		<a {...props} className="text-indigo-700 hover:underline" href={href}>
 			{children}
 		</a>
 	);
