@@ -8,6 +8,10 @@ React Joyride docs: https://docs.react-joyride.com
 
 ## Tour Samples and Notes
 
+One overall issue is that any elements with a transparent background will have their background appear grayed out when they become a focused step on a tour. This appears to be an [open issue](https://github.com/gilbarbara/react-joyride/issues/467) related to the behavior of [mix-blend-mode](https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode).
+
+The 'solution' for this is including a bg-color for UI components, but declaring specific background colors for elements like headings and spans seems inadvisable.
+
 ### Button Start Continuous
 
 This tour starts when the user clicks the `Start Tour` button. This tour is continuous which means that when the user clicks `Next` the tooltip will automatically highlight the next step. The user still has the option to interrupt the tour by clicking the X or clicking the dimmed area around the tooltip. Once the user reaches the last step of the tour they can restart the tour by clicking the `Start Tour` button again.
