@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import Joyride, { STATUS as JOYRIDE_STATUS } from 'react-joyride';
 import A from '../elements/A';
 import UiCard from '../components/UiCard';
 import Expander from '../components/Expander';
@@ -25,14 +27,56 @@ const foundationTrilogy = [
 	},
 ];
 
+const state = {
+	disableScrollParentFix: true,
+	run: true,
+	//stepIndex: 0,
+	steps: [
+		{
+			content: 'Expand the menu to see the books',
+			target: '.controlled-step-0',
+		},
+		{
+			content: 'The first book is Foundation',
+			target: '.controlled-step-1',
+		},
+		{
+			content: 'The second book is Foundation & Empire',
+			target: '.controlled-step-2',
+		},
+		{
+			content: 'The third book is Second Foundation',
+			target: '.controlled-step-3',
+		},
+	],
+};
+
 export default function ControlledTour() {
+	const [tourState, setTourState] = useState(state);
+
+	const handleTourCallback = (data) => {
+		const { action, index, status, type } = data;
+		/*setTourState((prev) => {
+			return { ...prev, stepIndex: prev.stepIndex + 1 };
+		});*/
+	};
+
 	return (
 		<div>
-			<Expander buttonText="Show Foundation Books">
-				{foundationTrilogy.map((book) => {
+			<Joyride callback={handleTourCallback} {...tourState} />
+			<Expander
+				buttonText="Show Foundation Books"
+				className="controlled-step-0"
+			>
+				{foundationTrilogy.map((book, index) => {
 					return (
-						<OneThreeColumn className="p-1">
-							<UiCard className="text-center">
+						<OneThreeColumn
+							className="p-1"
+							key={book.title + '-' + book.author}
+						>
+							<UiCard
+								className={`text-center${' controlled-step-' + (index + 1)}`}
+							>
 								<h2 className="text-xl font-bold">{book.title}</h2>
 								<div>by {book.author}</div>
 								<div>
